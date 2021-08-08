@@ -4,6 +4,16 @@
       background-color: white;
       min-height: rem(150);
 
+
+      &__top {
+        width: 100%;
+         padding: rem(25) 0;
+         
+        @include breakpoint-down(small) {
+            padding: rem(15) 0;
+        }
+      }
+
     .logo {
         max-width: 100%;
     }
@@ -51,18 +61,41 @@
 
         &__open {
             cursor: pointer;
-
-
         }
 
         &__close {
-
+            cursor: pointer;
         }
     }
 
     .menu {
-        
-        &__link {
+        background-color: var(--veryDarkViolet);
+        background-image: url('/images/bg-pattern-mobile-nav.svg');
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-position: bottom;
+        padding: rem(25);
+        z-index: 1;
 
+        &__link {
+            display: block;
+            text-align: center;
+            font-size: rem(20);
+            text-transform: uppercase;
+            font-weight: 500;
+            color: white;
+
+            &:not(:last-of-type) {
+                margin-bottom: rem(20);
+            }
+
+            &:last-of-type {
+                border: 1px solid white;
+                width: 100%;
+                text-align: center;
+                margin: auto;
+                padding: rem(5);
+
+            }
         }
     }
