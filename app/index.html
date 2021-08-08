@@ -11,28 +11,30 @@
     <title>Insure</title>
 </head>
 <body>
-    <header class="header container flex jc-sb">
+    <header class="header">
+        <div class="container flex jc-sb ai-c">
         <div class="logo">
             <img src="/images/logo.svg" alt="">
         </div>
         <nav class="nav">
-            <ul class="nav__links flex">
-          <li><a href="#" class="link">How we work</a></li>  
-          <li><a href="#" class="link">Blog</a></li>
-          <li><a href="#" class="link">Account</a></li>
-          <li><a href="#" class="link">View plans</a></li>
-            </ul>
+            <div class="nav__links flex">
+          <a href="#" class="link">How we work</a>  
+          <a href="#" class="link">Blog</a>
+          <a href="#" class="link">Account</a>
+          <a href="#" class="link">View plans</a>
+            </div>
         </nav>
          <div class="hamburger">
              <img class="hamburger__open" src="/images/icon-hamburger.svg" alt="hamburger open">
-             <img class="hamburger__close" src="/images/icon-close.svg" alt="hamburger close">
+             <img class="hamburger__close hidden" src="/images/icon-close.svg" alt="hamburger close">
          </div>
-         <ul class="menu">
+         <div class="menu hidden">
              <a href="" class="menu__link">How we work</a>
              <a href="" class="menu__link">Blog</a>
              <a href="" class="menu__link">Account</a>
              <a href="" class="menu__link">View plans</a>
-         </ul>
+         </div>
+        </div>
     </header>
  <script src="js/main.min.js"></script>   
 </body>

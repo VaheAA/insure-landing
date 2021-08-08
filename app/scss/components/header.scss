@@ -1,16 +1,40 @@
 @use '../utils/' as *;
 
 .header {
+      background-color: white;
+      min-height: rem(150);
 
     .logo {
-
+        max-width: 100%;
     }
 
     .nav {
 
+        @include breakpoint-down(small) {
+            display: none;
+        }
+     
         &__links {
 
             .link {
+
+                 text-transform: uppercase;
+                 color: var(--darkGrayViolet);
+                 padding: rem(5);
+                 font-weight: 500;
+
+                 &:not(:last-of-type) {
+                    margin-right: rem(15);
+
+                 }
+                 
+                 &:last-of-type {
+                     border: 1px solid var(--darkViolet);
+                     width: rem(140);
+                     text-align: center;
+                     color: var(--darkViolet);
+                 }
+              }
 
             }
 
@@ -21,7 +45,13 @@
 
         display: none;
 
+        @include breakpoint-down(small) {
+            display: block;
+        }
+
         &__open {
+            cursor: pointer;
+
 
         }
 
@@ -31,10 +61,8 @@
     }
 
     .menu {
-        display: none;
         
         &__link {
 
         }
     }
-}

@@ -18,3 +18,17 @@
 .jc-sb {
     justify-content: space-between;
 }
+
+.ai-c {
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+    @include breakpoint-down(small) {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+}
