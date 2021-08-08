@@ -1,0 +1,40 @@
+@use '../utils/' as *;
+
+.header {
+
+    .logo {
+
+    }
+
+    .nav {
+
+        &__links {
+
+            .link {
+
+            }
+
+        }
+    }
+
+    .hamburger {
+
+        display: none;
+
+        &__open {
+
+        }
+
+        &__close {
+
+        }
+    }
+
+    .menu {
+        display: none;
+        
+        &__link {
+
+        }
+    }
+}
