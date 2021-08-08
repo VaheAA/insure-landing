@@ -31,7 +31,8 @@
                  text-transform: uppercase;
                  color: var(--darkGrayViolet);
                  padding: rem(5);
-                 font-weight: 500;
+                 font-weight: 600;
+                 transition: all 0.2s ease-in;
 
                  &:not(:last-of-type) {
                     margin-right: rem(15);
@@ -42,6 +43,16 @@
                      border: 1px solid var(--darkViolet);
                      width: rem(140);
                      text-align: center;
+                     color: var(--darkViolet);
+                     transition: all 0.2s ease-in;
+
+                     &:hover {
+                         background-color: var(--darkViolet);
+                         color: white;
+                     }
+                 }
+
+                 &:hover {
                      color: var(--darkViolet);
                  }
               }
@@ -82,7 +93,7 @@
             text-align: center;
             font-size: rem(20);
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
             color: white;
 
             &:not(:last-of-type) {

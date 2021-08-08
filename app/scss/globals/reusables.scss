@@ -25,6 +25,8 @@
 
 .hidden {
     display: none;
+    transition: all 0.2s ease-in;
+    
     @include breakpoint-down(small) {
         display: none;
         visibility: hidden;
