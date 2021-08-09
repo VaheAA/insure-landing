@@ -1,7 +1,7 @@
 @use '../utils/' as *;
 
 main {
-    padding-top: rem(100);
+    padding-top: rem(65);
 }
 
 .hero {
@@ -10,13 +10,27 @@ main {
     background-image: url('/images/bg-pattern-intro-left-desktop.svg'), url('/images/bg-pattern-intro-right-desktop.svg');
     background-repeat: no-repeat;
     background-position: bottom left, top right;
+    
+    @include breakpoint-down(small) {
+        background-image: url('/images/bg-pattern-intro-left-mobile.svg'), url('/images/bg-pattern-intro-right-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top left, bottom right;
 
+    }
+    
+    
     &__info {
         width: 50%;
         margin: 0 auto;
         position: relative;
         top: rem(150);
         margin-left: 0;
+        
+        @include breakpoint-down(small) {
+            width: 100%;
+            position: static;
+            text-align: center;
+        }
         
         &::before {
             content: "";
@@ -25,6 +39,10 @@ main {
             background-color: white;
             position: absolute;
             top: rem(-45);
+            
+            @include breakpoint-down(small) {
+                display: none;
+            }
         }
     }
     
@@ -33,6 +51,11 @@ main {
             color: white;
             line-height: 1;
             margin-bottom: rem(25);
+            
+            @include breakpoint-down(small) {
+                font-size: rem(32);
+                margin-top: rem(20);
+            }
     }
     
     &__desc {
@@ -57,11 +80,22 @@ main {
                 background-color: white;
                 color: var(--darkViolet);
             }
+            
+            @include breakpoint-down(small) {
+                margin: auto;
+                margin-bottom: rem(25);
+            }
     }
     
     &__banner {
         position: absolute;
         top: 100px;
         right: 0;
+        
+        @include breakpoint-down(small) {
+            position: static;
+            width: 100%;
+        }
+        
     }
 }

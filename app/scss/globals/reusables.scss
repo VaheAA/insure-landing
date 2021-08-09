@@ -8,12 +8,31 @@
 
     @include breakpoint-down(small) {
         padding: 0 rem(25);
-
+    }
+    
+    &__mobile {
+        @include breakpoint-down(small) {
+        padding: 0;
+        }
     }
 }
 
 .flex {
     display: flex;
+}
+
+.fd-c {
+    @include breakpoint-down(small) {
+        flex-direction: column;
+
+    }
+}
+
+.fd-cr {
+    @include breakpoint-down(small) {
+        flex-direction: column-reverse;
+
+    }
 }
 
 .jc-sb {
@@ -22,6 +41,12 @@
 
 .ai-c {
     align-items: center;
+}
+
+.pl-pr {
+    @include breakpoint-down(small) {
+        padding: 0 rem(25);
+    }
 }
 
 .hidden {
@@ -34,4 +59,21 @@
         opacity: 0;
     }
 
+}
+
+.desktop {
+    display: block;
+    
+    @include breakpoint-down(small) {
+        display: none;
+    }
+}
+
+.mobile {
+    display: none;
+    
+    @include breakpoint-down(small) {
+        display: block;
+        width: 100%;
+    }
 }
