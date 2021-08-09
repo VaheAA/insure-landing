@@ -17,6 +17,9 @@
         @include breakpoint-down(small) {
             text-align: center;
             font-size: rem(42);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         &::before {
@@ -26,10 +29,6 @@
             background-color: var(--darkGrayViolet);
             position: absolute;
             top: rem(-45);
-            
-            @include breakpoint-down(small) {
-                left: 50%;
-            }
         }
 
     }
