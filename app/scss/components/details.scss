@@ -1,0 +1,61 @@
+@use '../utils/' as *;
+
+.details {
+    
+    padding-top: rem(100);
+    margin-bottom: rem(15);
+    
+    &__info {
+        background-color: var(--darkViolet);
+        background-image: url('/images/bg-pattern-how-we-work-desktop.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        min-height: rem(250);
+        padding: 0 rem(70);
+        
+        @include breakpoint-down(small) {
+            padding-bottom: rem(50);
+            padding-left: rem(25);
+            padding-right: rem(25);
+            background-image: url('/images/bg-pattern-how-we-work-mobile.svg');
+        }
+
+    }
+    
+    &__title {
+        color: white;
+        font-size: rem(52);
+        width: 50%;
+        line-height: 1;
+        
+        @include breakpoint-down(small) {
+            width: 100%;
+            font-size: rem(36);
+            text-align: center;
+            padding-top: rem(50);
+            padding-bottom: rem(50);
+
+        }
+    }
+    
+    &__btn {
+        width: 100%;
+        display: block;
+        width: rem(180);
+        font-size: rem(18);
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white;
+        border: 2px solid white;
+        text-align: center;
+        padding: rem(5);
+        transition: all 0.2s ease-in;
+            
+          &:hover {
+            background-color: white;
+            color: var(--darkViolet);
+            }
+
+    }
+       
+}
