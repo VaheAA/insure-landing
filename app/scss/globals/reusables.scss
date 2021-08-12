@@ -53,6 +53,11 @@
     }
 }
 
+.pt-pb {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+}
+
 .hidden {
     display: none;
     transition: all 0.2s ease-in;
