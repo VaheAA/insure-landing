@@ -24,7 +24,8 @@
 .fd-c {
     @include breakpoint-down(small) {
         flex-direction: column;
-
+        justify-content: space-between;
+        align-items: center;
     }
 }
 

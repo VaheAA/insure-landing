@@ -5,6 +5,96 @@
     background-image: url('/images/bg-pattern-footer-desktop.svg');
     background-color: var(--veryLightGray);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: top left;
+    
+    @include breakpoint-down(small) {
+        background-image: url('/images/bg-pattern-footer-mobile.svg');
+    }
+     
+     
+     
+    &__top {
+        position: relative;
+        margin-bottom: rem(85);
+        
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: rem(1);
+            background-color: var(--darkGrayViolet);
+            bottom: rem(-42.5);
+        }
+        
+
+
+    }
+    
+    &__logo {
+        @include breakpoint-down(small) {
+            margin-bottom: rem(20);
+        }
+    }
+    
+    &__icons {
+        
+        .icon-link {
+            
+            &:not(:last-of-type) {
+                margin-right: rem(15);
+                
+                
+                .icon {
+                    
+                    &:hover {
+                        filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);                                   
+                        }
+                }
+            }
+        }
+    }
+    
+    &__menu {
+        margin-right: auto;
+        max-width: 900px;
+        
+        @include breakpoint-down(small) {
+            text-align: center;
+        }
+        
+    }
+    
+    &__links-list {
+        
+        .links-title {
+            margin-bottom: rem(40);
+            color: var(--darkGrayViolet);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .item {
+            
+            &:not(:last-of-type) {
+                margin-bottom: rem(15);
+            }
+            
+            .link {
+                color: var(--veryDarkViolet);
+                font-weight: 600;
+                transition: all 0.15s ease-in;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+        &:not(:last-child) {
+            @include breakpoint-down(small) {
+                margin-bottom: rem(40);
+            }
+        }
+    }
     
 }
